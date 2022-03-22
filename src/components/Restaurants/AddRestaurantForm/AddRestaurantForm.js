@@ -27,7 +27,7 @@ export function AddRestaurantForm() {
         newData.id = uuid();
         newData.createdAt = new Date();
 
-        await setDoc(doc(db, "restaurants", newData.id), formValue);
+        await setDoc(doc(db, "asociaciones", newData.id), formValue);
 
         navigation.goBack();
       } catch (error) {
@@ -45,7 +45,7 @@ export function AddRestaurantForm() {
       <UploadImagesForm formik={formik} />
 
       <Button
-        title="Crear restaurante"
+        title="Crear empresa"
         buttonStyle={styles.addRestaurant}
         onPress={formik.handleSubmit}
         loading={loading}

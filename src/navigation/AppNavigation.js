@@ -6,6 +6,7 @@ import { RankingStack } from "navigation/RankingStack";
 import { SearchStack } from "navigation/SearchStack";
 import { AccountStack } from "navigation/AccountStack";
 import { screen } from "utils";
+import { AppCDScreen } from "../screens/AppCDScreen";
 
 const Tab = createBottomTabNavigator();
 
@@ -19,21 +20,24 @@ export function AppNavigation() {
         tabBarIcon: ({ color, size }) => screenOptions(route, color, size),
       })}
     >
+
+      <Tab.Screen
+        name={"screen.account.tab"}
+        component={AccountStack}
+        options={{ title: "Home" }}
+      />
+      <Tab.Screen
+        name={screen.app.tab}
+        component={AppCDScreen}
+        options={{ title: "App" }}
+      />
+
       <Tab.Screen
         name={screen.restaurant.tab}
         component={RestaurantStack}
-        options={{ title: "Restaurantes" }}
+        options={{ title: "Asociaciones" }}
       />
-      <Tab.Screen
-        name={screen.favorites.tab}
-        component={FavoritesStack}
-        options={{ title: "Favoritos" }}
-      />
-      <Tab.Screen
-        name={screen.ranking.tab}
-        component={RankingStack}
-        options={{ title: "Ranking" }}
-      />
+
       <Tab.Screen
         name={screen.search.tab}
         component={SearchStack}
@@ -44,6 +48,7 @@ export function AppNavigation() {
         component={AccountStack}
         options={{ title: "Cuenta" }}
       />
+
     </Tab.Navigator>
   );
 }
@@ -68,7 +73,10 @@ function screenOptions(route, color, size) {
   }
 
   if (route.name === screen.account.tab) {
-    iconName = "home-outline";
+    iconName = "account";
+  }
+  if (route.name === screen.app.tab) {
+    iconName = "gamepad-variant-outline";
   }
 
   return (

@@ -23,7 +23,7 @@ export function SearchScreen() {
   useEffect(() => {
     (async () => {
       const q = query(
-        collection(db, "restaurants"),
+        collection(db, "asociaciones"),
         orderBy("name"),
         startAt(searchText),
         endAt(`${searchText}\uf8ff`),
@@ -46,7 +46,7 @@ export function SearchScreen() {
   return (
     <>
       <SearchBar
-        placeholder="Busca tu restaurante"
+        placeholder="Busca tu asociación"
         value={searchText}
         onChangeText={(text) => setSearchText(text)}
       />

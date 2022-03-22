@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { ScrollView, Dimensions } from "react-native";
+
 import {
   doc,
   onSnapshot,
@@ -28,7 +29,7 @@ export function RestaurantScreen(props) {
 
   useEffect(() => {
     setRestaurant(null);
-    onSnapshot(doc(db, "restaurants", route.params.id), (doc) => {
+    onSnapshot(doc(db, "asociaciones", route.params.id), (doc) => {
       setRestaurant(doc.data());
     });
   }, [route.params.id]);
@@ -45,7 +46,7 @@ export function RestaurantScreen(props) {
     });
   }, [route.params.id]);
 
-  if (!restaurant) return <Loading show={true} text="Cargando restaurante" />;
+  if (!restaurant) return <Loading show={true} text="Cargando..." />;
 
   return (
     <ScrollView style={styles.content}>
@@ -57,6 +58,7 @@ export function RestaurantScreen(props) {
       <Reviews reviews={reviews} />
 
       <BtnFavorite idRestaurant={restaurant.id} />
+  
     </ScrollView>
   );
 }

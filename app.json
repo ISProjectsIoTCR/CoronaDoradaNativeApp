@@ -1,9 +1,9 @@
 {
   "expo": {
-    "name": "5-tenedores_dev",
-    "slug": "5-tenedores_dev",
+    "name": "CoronaDoradaApp",
+    "slug": "CoronaDoradaApp",
     "version": "1.0.0",
-    "orientation": "auto",
+    "orientation": "default",
     "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/splash.png",

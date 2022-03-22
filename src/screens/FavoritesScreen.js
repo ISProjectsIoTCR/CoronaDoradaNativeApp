@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import { ScrollView } from "react-native";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
@@ -35,7 +36,7 @@ export function FavoritesScreen() {
       let restaurantsArray = [];
       for await (const item of snapshot.docs) {
         const data = item.data();
-        const docRef = doc(db, "restaurants", data.idRestaurant);
+        const docRef = doc(db, "asociaciones", data.idRestaurant);
         const docSnap = await getDoc(docRef);
         const newData = docSnap.data();
         newData.idFavorite = data.id;
@@ -57,6 +58,7 @@ export function FavoritesScreen() {
       {map(restaurants, (restaurant) => (
         <RestaurantFavorite key={restaurant.id} restaurant={restaurant} />
       ))}
+   
     </ScrollView>
   );
 }

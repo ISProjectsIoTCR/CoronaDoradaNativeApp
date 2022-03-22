@@ -1,45 +1,24 @@
-# React Native Expo: Creando un TripAdvisor de Restaurantes
+# React Native Expo: Aplicación Corona Dorada
 
-_Curso en Udemy donde se explica paso a paso la creacion de la APP movil 5 Tenedores._
+_Aplicación para proyecto GIZ y Corona Dorada que da acceso al recorrido virtual y lista las asoaciaciones participantes._
+_Esta aplicación fue desarrollada utilizando ReactNative con Expo y Firebase como Backend Simple_
 
-**Curso:** https://tincode.es/cursos/react-native-expo-creando-un-tripadvisor-de-restaurantes
+**Web:** https://coronadorada.com/
 
-## Comenzando 🚀
+## Descripción 🚀
+_React Native es un framework JavaScript para crear aplicaciones reales nativas para iOS y Android, basado en la librearía de JavaScript React para la creación de componentes visuales, cambiando el propósito de los mismos para, en lugar de ser ejecutados en navegador, correr directamente sobre las plataformas móviles_
+_Gracias al uso de Expo con React Native, configurar los elementos nativos de los dispositivo es muy fácil._
+_Firebase es una plataforma de desarrollo de aplicaciones propiedad de Google que permite a los desarrolladores crear aplicaciones modernas con características de primer nivel en un tiempo récord_
 
-_Gracias a este curso aprenderás desde los conceptos básicos de **React Native**, hasta lo más **avanzados** para crear una APP completa desde cero **como la de TripAdvisor**._
+### Comenzando
 
-_Una vez terminado el curso **serás capaz de crear cualquier tipo de aplicación móvil** conectada a una base de datos sin necesidad de ayuda._
-
-_Aprenderemos desde las bases de React Native al uso de **elementos nativos del móvil**, como puede ser la cámara o el sistema de ficheros de fotos._
-
-_Gracias al uso de Expo con React Native aprenderemos a configurar los elementos nativos del dispositivo de una manera muy fácil._
-
-### Que veremos en el curso
-
-- Los estudiantes serán capaces de desarrollar aplicaciones móviles nativas para Android y iOS.
-- Los estudiantes aprenderás a desarrollar el sistema de navegación como un SideMenu, BottomMenu, entre otros componentes.
-- Aprenderás a usar el sistema React Native para crear App.
-- Aprenderemos a usar los Hooks de React.
-- Aprenderemos a usar Expo y sus herramientas.
-- Aprenderemos a configurar y usar Firebase y Firestone utilizando nuestro proyecto de React Native u otro proyecto.
-- Aprenderemos a manejar distintos tipos de autenticación en tiempo real con Firebase.
-- Aprenderemos a virtualizar un Sistema Android y iOS para hacer Debug.
-- Aprenderemos crear autenticaciones con email, etc...
-- Aprenderemos a controlar los datos que fluyen por React Native entre componentes.
-- Aprenderemos a crear componentes para reutilizar sobre la Aplicación.
-- Aprenderemos a usar React Navigation 6, para crear el menú.
-- Crearemos Formularios con validaciones con Formik y Yup.
-- Usaremos la geolocalización y los mapas.
-- Crearemos un Sistema de Favoritos.
-- Crearemos un buscador de restaurantes.
-- Crearemos Preloader para mostrarlos mientras cargan los componentes.
-- Crearemos Toast compatibles con Android y iOS.
-- Crearemos rankings de restaurantes.
-- Crearemos votaciones sobre los restaurantes.
-- Aremos uso de elementos interno del dispositivo como puede ser la Camara o la galería.
-- Aprenderemos a usar React Native Elements.
-- Generar .APK y .IPA
+- Instala ReactNative: **https://reactnative.dev/docs/environment-setup**
+- Nueva Carpeta vacía para clonar el proyecto (VSCode recomendado).
+- Clona este proyecto ***sudo git clone https://github.com/ISProjectsIoTCR/CoronaDoradaNativeApp.git***
+- Comando de arranque con expo ***sudo npm run start***
+- Habilitar Firebase: (Auth, Firestore, Storage)
+- Modificar ****src/utils/firebase.js***
 
 ---
 
-⌨️ con ❤️ por [xAgustin93](https://github.com/xAgustin93) 😊
+⌨️  por [ISProjects](https://github.com/ISProjectsIoTCR)

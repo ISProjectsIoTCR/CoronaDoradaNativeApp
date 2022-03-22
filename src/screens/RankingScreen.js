@@ -10,7 +10,7 @@ export function RankingScreen() {
 
   useEffect(() => {
     const q = query(
-      collection(db, "restaurants"),
+      collection(db, "asociaciones"),
       orderBy("ratingMedia", "desc")
     );
 

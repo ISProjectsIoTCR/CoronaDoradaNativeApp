@@ -14,7 +14,7 @@ export function InfoForm(props) {
     <>
       <View style={styles.content}>
         <Input
-          placeholder="Nombre del restaurante"
+          placeholder="Nombre"
           onChangeText={(text) => formik.setFieldValue("name", text)}
           errorMessage={formik.errors.name}
         />
@@ -30,7 +30,7 @@ export function InfoForm(props) {
           errorMessage={formik.errors.address}
         />
         <Input
-          placeholder="Descripción del restaurante"
+          placeholder="Descripción"
           multiline={true}
           inputContainerStyle={styles.textArea}
           onChangeText={(text) => formik.setFieldValue("description", text)}

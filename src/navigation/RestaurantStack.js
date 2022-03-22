@@ -13,17 +13,17 @@ export function RestaurantStack() {
       <Stack.Screen
         name={screen.restaurant.restaurants}
         component={RestaurantsScreen}
-        options={{ title: "Restaurantes" }}
+        options={{ title: "Asociaciones" }}
       />
       <Stack.Screen
         name={screen.restaurant.addRestaurant}
         component={AddRestarantScreen}
-        options={{ title: "Nuevo restaurante" }}
+        options={{ title: "Nueva asociación" }}
       />
       <Stack.Screen
         name={screen.restaurant.restaurant}
         component={RestaurantScreen}
-        options={{ title: "Restaurante" }}
+        options={{ title: "Asociación" }}
       />
       <Stack.Screen
         name={screen.restaurant.addReviewRestaurant}

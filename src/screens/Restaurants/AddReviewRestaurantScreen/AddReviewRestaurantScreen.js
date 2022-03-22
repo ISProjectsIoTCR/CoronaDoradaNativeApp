@@ -65,7 +65,7 @@ export function AddReviewRestaurantScreen() {
 
       const media = mean(arrayStars);
 
-      const washingtonRef = doc(db, "restaurants", params.idRestaurant);
+      const washingtonRef = doc(db, "asociaciones", params.idRestaurant);
       await updateDoc(washingtonRef, {
         ratingMedia: media,
       });

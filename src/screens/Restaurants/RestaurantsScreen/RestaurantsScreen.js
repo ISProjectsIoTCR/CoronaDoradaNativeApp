@@ -7,6 +7,7 @@ import { db, screen } from "utils";
 import { ListRestaurants, LoadingModal } from "components";
 import { styles } from "./RestaurantsScreen.styles";
 
+
 export function RestaurantsScreen(props) {
   const { navigation } = props;
   const [currentUser, setCurrentUser] = useState(null);
@@ -21,7 +22,7 @@ export function RestaurantsScreen(props) {
 
   useEffect(() => {
     const q = query(
-      collection(db, "restaurants"),
+      collection(db, "asociaciones"),
       orderBy("createdAt", "desc")
     );
 
@@ -38,16 +39,8 @@ export function RestaurantsScreen(props) {
         <ListRestaurants restaurants={restaurants} />
       )}
 
-      {currentUser && (
-        <Icon
-          reverse
-          type="material-community"
-          name="plus"
-          color="#00a680"
-          containerStyle={styles.btnContent}
-          onPress={() => navigation.navigate(screen.restaurant.addRestaurant)}
-        />
-      )}
+
+     
     </View>
   );
 }
