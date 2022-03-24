@@ -32,11 +32,17 @@ const appStack = {
   app: "App",
 };
 
+const homeStack = {
+  tab: "HomeTab",
+  home: "Home",
+};
+
 export const screen = {
   restaurant: restaurantStack,
   favorites: favoritesStack,
   ranking: rankingStack,
   search: searchStack,
   account: accountStack,
-  app:appStack
+  app:appStack,
+  home:homeStack
 };

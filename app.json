@@ -1,9 +1,8 @@
 {
   "expo": {
-    "name": "CoronaDoradaApp",
-    "slug": "CoronaDoradaApp",
-    "version": "1.0.0",
-    "orientation": "default",
+    "name": "CoronaDoradaNativeApp",
+    "slug": "coronadoradanativeapp",
+    "version": "1.1.0",
     "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/splash.png",
@@ -17,13 +16,37 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "The app accesses your photos to let you share them with your friends.",
+        "NSCameraUsageDescription": "Allow $(PRODUCT_NAME) to access your camera",
+        "NSMicrophoneUsageDescription": "Allow $(PRODUCT_NAME) to access your microphone"
+      }
     },
     "android": {
+      "permissions": [
+        "CAMERA_ROLL",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.RECORD_AUDIO"
+      ],
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
+      },
+      "package": "com.rrojasn17.coronadoradanativeapp",
+      "config":{
+        "googleMaps":{
+          "apiKey":"AIzaSyDkr8CIaiO-2Ot9DshPjXg5dGRWErsQZhA"
+        }
       }
+
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -35,6 +58,8 @@
           "photosPermission": "The app accesses your photos to let you share them with your friends."
         }
       ]
-    ]
+    ],
+    "description": "Aplicación para proyecto GIZ y Corona Dorada que da acceso al recorrido virtual y lista las asociaciones participantes. Esta aplicación fue desarrollada utilizando ReactNative con Expo y Firebase como Backend Simple",
+    "githubUrl": "https://github.com/ISProjectsIoTCR/CoronaDoradaNativeApp"
   }
 }

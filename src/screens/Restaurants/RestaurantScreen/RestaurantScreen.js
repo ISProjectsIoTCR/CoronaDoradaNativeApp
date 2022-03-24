@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { ScrollView, Dimensions } from "react-native";
+import { ScrollView, Dimensions, Text } from "react-native";
 
 import {
   doc,
@@ -53,12 +53,16 @@ export function RestaurantScreen(props) {
       <Carousel arrayImages={restaurant.images} height={250} width={width} />
       <Header restaurant={restaurant} reviews={reviews} />
       <Info restaurant={restaurant} />
-      <BtnReviewForm idRestaurant={restaurant.id} />
 
+      {/*<BtnReviewForm idRestaurant={restaurant.id} />
       <Reviews reviews={reviews} />
+      <BtnFavorite idRestaurant={restaurant.id} />*/}
 
-      <BtnFavorite idRestaurant={restaurant.id} />
-  
+      <Text>
+
+      {"\n \n"}
+      </Text>
+
     </ScrollView>
   );
 }

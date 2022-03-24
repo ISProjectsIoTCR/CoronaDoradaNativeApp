@@ -2,6 +2,7 @@ import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
   viewBody: {
+    marginTop:200,
     marginLeft: 30,
     marginRight: 30,
   },

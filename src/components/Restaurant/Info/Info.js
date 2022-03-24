@@ -25,6 +25,11 @@ export function Info(props) {
       iconName: "at",
       link: "mailto:"+restaurant.email
     },
+    {
+      text: restaurant.contact,
+      iconType: "material-community",
+      iconName: "account-cowboy-hat"
+    },
   ];
 
 

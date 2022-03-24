@@ -1,8 +1,7 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Icon } from "react-native-elements";
 import { RestaurantStack } from "navigation/RestaurantStack";
-import { FavoritesStack } from "navigation/FavoritesStack";
-import { RankingStack } from "navigation/RankingStack";
+import { HomeStack } from "navigation/HomeStack";
 import { SearchStack } from "navigation/SearchStack";
 import { AccountStack } from "navigation/AccountStack";
 import { screen } from "utils";
@@ -22,8 +21,8 @@ export function AppNavigation() {
     >
 
       <Tab.Screen
-        name={"screen.account.tab"}
-        component={AccountStack}
+        name={screen.home.home}
+        component={HomeStack}
         options={{ title: "Home" }}
       />
       <Tab.Screen
@@ -43,11 +42,13 @@ export function AppNavigation() {
         component={SearchStack}
         options={{ title: "Buscar" }}
       />
+
+      {/* 
       <Tab.Screen
         name={screen.account.tab}
         component={AccountStack}
         options={{ title: "Cuenta" }}
-      />
+      />*/}
 
     </Tab.Navigator>
   );
@@ -77,6 +78,9 @@ function screenOptions(route, color, size) {
   }
   if (route.name === screen.app.tab) {
     iconName = "gamepad-variant-outline";
+  }
+  if (route.name === screen.home.home) {
+    iconName = "home-outline";
   }
 
   return (

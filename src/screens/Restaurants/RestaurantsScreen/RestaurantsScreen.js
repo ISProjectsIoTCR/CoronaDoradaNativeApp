@@ -38,9 +38,16 @@ export function RestaurantsScreen(props) {
       ) : (
         <ListRestaurants restaurants={restaurants} />
       )}
-
-
-     
+      {currentUser && (
+        <Icon
+          reverse
+          type="material-community"
+          name="plus"
+          color="#00a680"
+          containerStyle={styles.btnContent}
+          onPress={() => navigation.navigate(screen.restaurant.addRestaurant)}
+        />
+      )}
     </View>
   );
 }

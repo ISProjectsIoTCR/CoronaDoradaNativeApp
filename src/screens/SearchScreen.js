@@ -25,8 +25,8 @@ export function SearchScreen() {
       const q = query(
         collection(db, "asociaciones"),
         orderBy("name"),
-        startAt(searchText),
-        endAt(`${searchText}\uf8ff`),
+        startAt(searchText.toUpperCase()),
+        endAt(`${searchText.toUpperCase()}\uf8ff`),
         limit(20)
       );
 
